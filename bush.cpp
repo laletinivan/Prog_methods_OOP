@@ -4,10 +4,33 @@ namespace plants {
 	void bush::InData(ifstream& ifst) {
 		int temp;
 		ifst >> temp;
+		pog = plant::place_of_growth(temp);
+		ifst >> temp;
 		m = bush::flowering_month(temp);
 	}
 	void bush::Out(ofstream& ofst) {
-		ofst << "Name is " << name << " ";
+		ofst << "Name is " << name << ", ";
+		ofst << "place of growth is ";
+		switch (pog) {
+		case Tundra:
+			ofst << "Tundra ";
+			break;
+		case Taiga:
+			ofst << "Taiga ";
+			break;
+		case Forest:
+			ofst << "Forest ";
+			break;
+		case Steppe:
+			ofst << "Steppe ";
+			break;
+		case Jungle:
+			ofst << "Jungle ";
+			break;
+		default:
+			ofst << "<Blank> ";
+			break;
+		}
 		ofst << "and it is bush: flowering month = ";
 		switch (m) {
 		case 0:

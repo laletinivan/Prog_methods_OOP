@@ -8,6 +8,8 @@ namespace plants {
 	class plant {
 	public:
 		string name;
+		enum place_of_growth { Tundra, Taiga, Forest, Steppe, Jungle };
+		place_of_growth pog;
 		// иденитфикация, порождение и ввод фигуры из потока
 		static plant* In(ifstream& ifst);
 		virtual void InData(ifstream& ifst) = 0; // ввод
