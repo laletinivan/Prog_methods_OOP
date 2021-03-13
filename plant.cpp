@@ -3,6 +3,7 @@
 // геометрических фигурах
 #include "bush_atd.h"
 #include "tree_atd.h"
+#include "flower_atd.h"
 using namespace std;
 namespace plants {
 	// Ввод параметров обобщенной фигуры
@@ -17,6 +18,10 @@ namespace plants {
 			break;
 		case 2:
 			sp = new tree;
+			ifst >> sp->name;
+			break;
+		case 3:
+			sp = new flower;
 			ifst >> sp->name;
 			break;
 		default:
