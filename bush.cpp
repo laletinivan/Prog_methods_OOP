@@ -7,7 +7,8 @@ namespace plants {
 		m = bush::flowering_month(temp);
 	}
 	void bush::Out(ofstream& ofst) {
-		ofst << "Name is " << name << " ";
+		ofst << "Name is " << name << ", ";
+		ofst << "number of consonants in name = " << cons << " ";
 		ofst << "and it is bush: flowering month = ";
 		switch (m) {
 		case 0:

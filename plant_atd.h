@@ -8,10 +8,12 @@ namespace plants {
 	class plant {
 	public:
 		string name;
+		int cons;
 		// иденитфикация, порождение и ввод фигуры из потока
 		static plant* In(ifstream& ifst);
 		virtual void InData(ifstream& ifst) = 0; // ввод
 		virtual void Out(ofstream& ofst) = 0; // вывод
+		void Consanants();
 	};
 } // end plants namespace
 

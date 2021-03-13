@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/Debug
+/Out.txt
+/OOP.vcxproj.user
+/OOP.vcxproj.filters
+/OOP.vcxproj
+/OOP.sln
+/In.txt
