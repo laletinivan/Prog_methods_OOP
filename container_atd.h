@@ -8,6 +8,7 @@ namespace plants {
 		public:
 			elem* GetNext() { return next; };
 			void SetNext(elem* a) { next = a; };
+			plant* GetData() { return data; };
 			void In(ifstream& ifst) { data = data->In(ifst); };
 			void Out(ofstream& ofst) { data->Out(ofst); };
 			elem() { data = NULL; next = NULL; };
@@ -20,6 +21,7 @@ namespace plants {
 		public:
 			void In(ifstream& ifst); // ввод
 			void Out(ofstream& ofst); // вывод
+			void OutBush(ofstream& ofst);
 			void Clear(); // очистка контейнера от фигур
 			container(); // инициализация контейнера
 			~container() { Clear(); } // утилизация контейнера

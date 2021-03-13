@@ -9,6 +9,7 @@ namespace plants {
 		// переопределяем интерфейс класса
 		void InData(ifstream& ifst); // ввод
 		void Out(ofstream& ofst); // вывод
+		void OutBush(ofstream& ofst);
 		bush() {} // создание без инициализации.
 	};
 } // end plants namespace

@@ -5,6 +5,9 @@
 #include "tree_atd.h"
 using namespace std;
 namespace plants {
+	void plant::OutBush(ofstream& ofst) {
+		ofst << endl;
+	}
 	// ¬вод параметров обобщенной фигуры
 	plant* plant::In(ifstream& ifst) {
 		plant* sp;
