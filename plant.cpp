@@ -5,6 +5,10 @@
 #include "tree_atd.h"
 using namespace std;
 namespace plants {
+	// —равнение дл€ растений по количеству согласных букв
+	bool plant::Compare(plant& other) {
+		return cons < other.cons;
+	}
 	//  оличество согласных букв
 	void plant::Consanants() {
 		string vowel = "AEIOUaeiou";
