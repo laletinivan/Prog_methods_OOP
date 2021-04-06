@@ -44,4 +44,13 @@ namespace plants {
 			temp = temp->GetNext();
 		}
 	}
+	void container::OutBush(ofstream& ofst) {
+		ofst << "Only bushes." << endl;
+		elem* temp = head;
+		for (int i = 0; i < size; i++) {
+			ofst << i << ": ";
+			temp->GetData()->OutBush(ofst);
+			temp = temp->GetNext();
+		}
+	}
 }

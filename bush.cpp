@@ -1,6 +1,9 @@
 #include "bush_atd.h"
 using namespace std;
 namespace plants {
+	void bush::OutBush(ofstream& ofst) {
+		Out(ofst);
+	}
 	void bush::InData(ifstream& ifst) {
 		int temp;
 		ifst >> temp;
