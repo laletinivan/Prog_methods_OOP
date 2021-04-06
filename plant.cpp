@@ -1,6 +1,4 @@
 #include "plant_atd.h"
-// Необходима подключить информацию обо всех имеющихся
-// геометрических фигурах
 #include "bush_atd.h"
 #include "tree_atd.h"
 #include "flower_atd.h"
@@ -9,8 +7,22 @@ namespace plants {
 	void plant::OutBush(ofstream& ofst) {
 		ofst << endl;
 	}
+	// Сравнение для растений по количеству согласных букв
+	bool plant::Compare(plant& other) {
+		return cons < other.cons;
+	}
+	// Количество согласных букв
+	void plant::Consanants() {
+		string vowel = "AEIOUaeiou";
+		cons = 0;
+		for (int i = 0; i < name.length(); i++) {
+			if (vowel.find(name[i]) == string::npos) {
+				cons++;
+			}
+		}
+	}
 	// Ввод параметров обобщенной фигуры
-	plant* plant::In(ifstream& ifst) {
+	plant* plant::In(ifstream & ifst) {
 		plant* sp;
 		int k;
 		ifst >> k;
@@ -18,14 +30,17 @@ namespace plants {
 		case 1:
 			sp = new bush;
 			ifst >> sp->name;
+			sp->Consanants();
 			break;
 		case 2:
 			sp = new tree;
 			ifst >> sp->name;
+			sp->Consanants();
 			break;
 		case 3:
 			sp = new flower;
 			ifst >> sp->name;
+			sp->Consanants();
 			break;
 		default:
 			return 0;

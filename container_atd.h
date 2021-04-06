@@ -21,6 +21,12 @@ namespace plants {
 		public:
 			void In(ifstream& ifst); // ввод
 			void Out(ofstream& ofst); // вывод
+			void Push(elem* tmp);
+			void DeleteAt(int pos);
+			void Sort();
+			void SetSize(int a);
+			void SetHead(elem* a);
+			void SetTail(elem* a);
 			void OutBush(ofstream& ofst);
 			void Clear(); // очистка контейнера от фигур
 			container(); // инициализация контейнера

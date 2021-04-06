@@ -8,6 +8,7 @@ namespace plants {
 	class plant {
 	public:
 		string name;
+		int cons;
 		enum place_of_growth { Tundra, Taiga, Forest, Steppe, Jungle };
 		place_of_growth pog;
 		// иденитфикация, порождение и ввод фигуры из потока
@@ -15,6 +16,8 @@ namespace plants {
 		virtual void InData(ifstream& ifst) = 0; // ввод
 		virtual void Out(ofstream& ofst) = 0; // вывод
 		virtual void OutBush(ofstream& ofst);
+		void Consanants();
+		bool Compare(plant& other);
 	};
 } // end plants namespace
 
