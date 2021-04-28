@@ -9,7 +9,8 @@ namespace plants {
 		t = flower::type(tmp);
 	}
 	void flower::Out(ofstream& ofst) {
-		ofst << "Name is " << name << " ";
+		ofst << "Name is " << name << ", ";
+		ofst << "number of cons is " << cons << ", ";
 		ofst << "place of growth is ";
 		switch (pog) {
 		case Tundra:

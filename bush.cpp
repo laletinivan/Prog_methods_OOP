@@ -13,6 +13,7 @@ namespace plants {
 	}
 	void bush::Out(ofstream& ofst) {
 		ofst << "Name is " << name << ", ";
+		ofst << "number of cons is " << cons << ", ";
 		ofst << "place of growth is ";
 		switch (pog) {
 		case Tundra:

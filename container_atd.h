@@ -27,6 +27,9 @@ namespace plants {
 			void SetSize(int a);
 			void SetHead(elem* a);
 			void SetTail(elem* a);
+			int GetSize();
+			elem* GetHead();
+			elem* GetTail();
 			void OutBush(ofstream& ofst);
 			void Clear(); // очистка контейнера от фигур
 			container(); // инициализация контейнера
