@@ -13,17 +13,27 @@ int main(int argc, char* argv[])
 		exit(1);
 	}
 	ifstream ifst(argv[1]);
+	if (!ifst.is_open())
+	{
+		cout << "Could not to open input file!" << endl;
+		return 1;
+	}
 	ofstream ofst(argv[2]);
+	if (!ofst.is_open())
+	{
+		cout << "Could not to open output file!" << endl;
+		return 1;
+	}
 	cout << "Start" << endl;
 	container c;
-	c.In(ifst);
+	c.in(ifst);
 	ofst << "Filled container. " << endl;
-	c.Sort();
-	c.Out(ofst);
-	c.OutBush(ofst);
-	c.Clear();
+	c.sort();
+	c.out(ofst);
+	c.out_bush(ofst);
+	c.clear();
 	ofst << "Empty container. " << endl;
-	c.Out(ofst);
+	c.out(ofst);
 	cout << "Stop" << endl;
 	return 0;
 }

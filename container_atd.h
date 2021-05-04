@@ -6,34 +6,63 @@ namespace plants {
 			plant* data;
 			elem* next;
 		public:
-			elem* GetNext() { return next; };
-			void SetNext(elem* a) { next = a; };
-			plant* GetData() { return data; };
-			void In(ifstream& ifst) { data = data->In(ifst); };
-			void Out(ofstream& ofst) { data->Out(ofst); };
-			elem() { data = NULL; next = NULL; };
-			elem(plant* a, elem* b) { data = a; next = b; };
-			~elem() { delete  data; };
+			elem* get_next() 
+			{ 
+				return next; 
+			};
+			void set_next(elem* a)
+			{ 
+				next = a; 
+			};
+			plant* get_data() 
+			{ 
+				return data; 
+			};
+			void in(ifstream& ifst) 
+			{ 
+				data = data->in(ifst); 
+			};
+			void out(ofstream& ofst) 
+			{ 
+				data->out(ofst); 
+			};
+			elem() 
+			{ 
+				data = NULL; 
+				next = NULL; 
+			};
+			elem(plant* a, elem* b) 
+			{ 
+				data = a; 
+				next = b; 
+			};
+			~elem() 
+			{ 
+				delete  data; 
+			};
 		};
 		class container {
 			int size; // текущая длина
 			elem *head, *tail;
 		public:
-			void In(ifstream& ifst); // ввод
-			void Out(ofstream& ofst); // вывод
-			void Push(elem* tmp);
-			void DeleteAt(int pos);
-			void Sort();
-			void SetSize(int a);
-			void SetHead(elem* a);
-			void SetTail(elem* a);
-			int GetSize();
-			elem* GetHead();
-			elem* GetTail();
-			void OutBush(ofstream& ofst);
-			void Clear(); // очистка контейнера от фигур
+			void in(ifstream& ifst); // ввод
+			void out(ofstream& ofst); // вывод
+			void push(elem* tmp);
+			void delete_at(int pos);
+			void sort();
+			void set_size(int a);
+			void set_head(elem* a);
+			void set_tail(elem* a);
+			int get_size();
+			elem* get_head();
+			elem* get_tail();
+			void out_bush(ofstream& ofst);
+			void clear(); // очистка контейнера от фигур
 			container(); // инициализация контейнера
-			~container() { Clear(); } // утилизация контейнера
+			~container() 
+			{ 
+				clear(); 
+			} // утилизация контейнера
 		};
 } // end plants namespace
 

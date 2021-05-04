@@ -1,13 +1,18 @@
 #pragma once
 #include "plant_atd.h"
-namespace plants {
-	class flower : public plant {
-		enum type { Home, Garden, Wild };
+namespace plants 
+{
+	class flower : public plant 
+	{
+		enum type 
+		{ 
+			HOME, GARDEN, WILD 
+		};
 		type t;
 	public:
 		// переопределяем интерфейс класса
-		void InData(ifstream& ifst); // ввод
-		void Out(ofstream& ofst); // вывод
+		void in_data(ifstream& ifst); // ввод
+		void out(ofstream& ofst); // вывод
 		flower() {} // создание без инициализации.
 	};
 } // end plants namespace
