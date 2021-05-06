@@ -158,4 +158,27 @@ namespace plants
 			temp = temp->get_next();
 		}
 	}
+	elem* container::get_elem(int pos) 
+	{
+		elem* temp = head;
+		for (int i = 0; i < pos; i++)
+		{
+			temp = temp->get_next();
+		}
+		return temp;
+	}
+	void container::multimethod(ofstream& ofst)
+	{
+		ofst << "Multimethod" << endl;
+
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				get_elem(i)->get_data()->multimethod(get_elem(j)->get_data(), ofst);
+				get_elem(i)->get_data()->out(ofst);
+				get_elem(j)->get_data()->out(ofst);
+			}
+		}
+	}
 }

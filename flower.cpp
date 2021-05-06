@@ -76,4 +76,20 @@ namespace plants
 		}
 		ofst << endl;
 	}
+	void flower::multimethod(plant* other, ofstream& ofst)
+	{
+		other->mm_flower(ofst);
+	}
+	void flower::mm_tree(ofstream& ofst)
+	{
+		ofst << "Tree and flower" << endl;
+	}
+	void flower::mm_bush(ofstream& ofst)
+	{
+		ofst << "Bush and flower" << endl;
+	}
+	void flower::mm_flower(ofstream& ofst)
+	{
+		ofst << "Flower and flower" << endl;
+	}
 } // end plants namespace

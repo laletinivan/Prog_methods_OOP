@@ -54,8 +54,10 @@ namespace plants {
 			void set_head(elem* a);
 			void set_tail(elem* a);
 			int get_size();
+			void multimethod(ofstream& ofst);
 			elem* get_head();
 			elem* get_tail();
+			elem* get_elem(int pos);
 			void out_bush(ofstream& ofst);
 			void clear(); // очистка контейнера от фигур
 			container(); // инициализация контейнера

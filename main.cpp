@@ -31,6 +31,7 @@ int main(int argc, char* argv[])
 	c.sort();
 	c.out(ofst);
 	c.out_bush(ofst);
+	c.multimethod(ofst);
 	c.clear();
 	ofst << "Empty container. " << endl;
 	c.out(ofst);

@@ -60,4 +60,20 @@ namespace plants
 		}
 		ofst << "and it is tree: age = " << age << endl;
 	}
+	void tree::multimethod(plant* other, ofstream& ofst)
+	{
+		other->mm_tree(ofst);
+	}
+	void tree::mm_tree(ofstream& ofst)
+	{
+		ofst << "Tree and tree" << endl;
+	}
+	void tree::mm_bush(ofstream& ofst)
+	{
+		ofst << "Bush and tree" << endl;
+	}
+	void tree::mm_flower(ofstream& ofst)
+	{
+		ofst << "Flower and tree" << endl;
+	}
 } // end plants namespace
